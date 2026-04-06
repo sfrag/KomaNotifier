@@ -9,10 +9,12 @@ TERM_WEIGHTS: "OrderedDict[str, int]" = OrderedDict(
     {
         "土星こま": 50,
         "The Saturn": 45,
+        "saturn top": 35,
         "mh044": 40,
         "広井政昭": 25,
         "Hiroi": 20,
         "Masaaki": 15,
+        "spinning top": 12,
         "球": 10,
         "球体": 10,
         "内球": 10,
@@ -22,7 +24,7 @@ TERM_WEIGHTS: "OrderedDict[str, int]" = OrderedDict(
     }
 )
 
-STRONG_TERMS = {"土星こま", "The Saturn", "mh044"}
+STRONG_TERMS = {"土星こま", "The Saturn", "saturn top", "mh044"}
 AUTHOR_TERMS = {"広井政昭", "Hiroi", "Masaaki"}
 STRUCTURE_TERMS = {"球", "球体", "内球", "二重構造", "回転", "江戸独楽"}
 

@@ -14,9 +14,11 @@ DEFAULT_QUERIES = [
     "mh044 土星こま",
     "広井政昭 独楽",
     "江戸独楽 広井政昭",
+    "saturn top hiroi",
+    "hiroi masaaki spinning top",
 ]
 
-DEFAULT_ENABLED_SOURCES = ["buyee", "yahoo_auctions", "mercari", "rakuma", "mandarake"]
+DEFAULT_ENABLED_SOURCES = ["buyee", "ebay", "yahoo_auctions", "mercari", "rakuma", "mandarake"]
 LOGGER = logging.getLogger(__name__)
 
 

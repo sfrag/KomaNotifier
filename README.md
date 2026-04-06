@@ -16,7 +16,7 @@ Palabras clave principales:
 - `Hiroi Masaaki`
 - `mh044`
 
-Buyee es la fuente prioritaria en la implementación.
+Buyee es la fuente prioritaria en la implementación, y se complementa con eBay para capturar reventas internacionales.
 
 ## Características
 
@@ -51,6 +51,7 @@ saturn-koma-watcher/
       __init__.py
       base.py
       buyee.py
+      ebay.py
       yahoo_auctions.py
       mercari.py
       rakuma.py
@@ -122,7 +123,7 @@ Si `config.json` no existe, se usan defaults internos y variables de entorno.
 Opciones en `config.example.json`:
 
 - `queries`: lista de búsquedas en japonés/inglés.
-- `enabled_sources`: fuentes activas (`buyee`, `yahoo_auctions`, `mercari`, `rakuma`, `mandarake`).
+- `enabled_sources`: fuentes activas (`buyee`, `ebay`, `yahoo_auctions`, `mercari`, `rakuma`, `mandarake`).
 - `min_score`: umbral mínimo para notificar.
 - `discord_webhook_url`: webhook de Discord.
 - `smtp_*`: configuración SMTP opcional.
@@ -145,10 +146,12 @@ Pesos base (título > descripción):
 
 - `+50` `土星こま`
 - `+45` `The Saturn`
+- `+35` `saturn top`
 - `+40` `mh044`
 - `+25` `広井政昭`
 - `+20` `Hiroi`
 - `+15` `Masaaki`
+- `+12` `spinning top`
 - `+10` `球` / `球体` / `内球`
 - `+10` `二重構造`
 - `+8` `回転`
@@ -161,14 +164,16 @@ La descripción aplica peso reducido (`60%` del peso base). Además hay bonus po
 Orden de prioridad:
 
 1. Buyee
-2. Yahoo! Auctions Japan
-3. Mercari Japan
-4. Rakuten Rakuma
-5. Mandarake
+2. eBay
+3. Yahoo! Auctions Japan
+4. Mercari Japan
+5. Rakuten Rakuma
+6. Mandarake
 
 Estado actual de robustez:
 
 - `buyee`: implementación activa con parser defensivo (JSON-LD + fallback HTML).
+- `ebay`: implementación activa con parser HTML defensivo para resultados globales.
 - `yahoo_auctions`, `mercari`, `rakuma`, `mandarake`: plugin implementado pero devuelve `[]` con warning explícito por baja fiabilidad sin API estable.
 
 Esto es intencional para evitar parsers frágiles que aparenten funcionar.
