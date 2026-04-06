@@ -1,0 +1,28 @@
+{
+  "queries": [
+    "広井政昭 土星こま",
+    "土星こま",
+    "The Saturn 広井政昭",
+    "Hiroi Masaaki Saturn koma",
+    "mh044 土星こま",
+    "広井政昭 独楽",
+    "江戸独楽 広井政昭"
+  ],
+  "enabled_sources": [
+    "buyee",
+    "yahoo_auctions",
+    "mercari",
+    "rakuma",
+    "mandarake"
+  ],
+  "min_score": 60,
+  "discord_webhook_url": "",
+  "smtp_host": "",
+  "smtp_port": 587,
+  "smtp_username": "",
+  "smtp_password": "",
+  "smtp_from": "",
+  "smtp_to": "",
+  "request_timeout": 15,
+  "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
